@@ -13,10 +13,15 @@ Welcome to the **Harry Potter themed Memory Card Game**, an interactive memory g
 
 - **ScoreTracking**:Your highest score thus far will be tracked and displayed respectively.
 
-1. **Interface**
+1. **Website Link**
+
+   [Visit the Memory Game](https://memory-game-nikhil-sai-nambulas-projects.vercel.app/)
+
+2. **Interface**
+
    ![Memory Game](/src/assets/images/image.png)
 
-2. **Clone the Repository**:
+3. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/harry-potter-memory-game.git
    cd harry-potter-memory-game

@@ -31,7 +31,6 @@ body.home-page {
   background-size: cover;
   width: 100vw;
   background-repeat: no-repeat;
-  /* background-color: 2px solid red; */
 }
 
 body.main-page {
@@ -54,7 +53,7 @@ body.main-page {
 .harry-potter-button {
   background: linear-gradient(45deg, #ffd700, #ffaa00, #b8860b);
   color: #ffffff;
-  font-family: "HarryPotterFont", serif; /* Use a Harry Potter-inspired font if available */
+  font-family: "HarryPotterFont", serif;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.5em 1.5em;
@@ -156,7 +155,6 @@ p {
   width: 100vw;
   z-index: 1;
   position: fixed;
-  /* overflow: auto; */
 }
 
 .modal-content {
@@ -169,7 +167,6 @@ p {
   height: 35vh;
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -210,7 +207,6 @@ p {
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    /* font-size: 2rem; */
   }
 
   body.main-page {
@@ -233,7 +229,7 @@ p {
   .harry-potter-button {
     background: linear-gradient(45deg, #ffd700, #ffaa00, #b8860b);
     color: #ffffff;
-    font-family: "HarryPotterFont", serif; /* Use a Harry Potter-inspired font if available */
+    font-family: "HarryPotterFont", serif;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.75em 1.5em;
@@ -265,7 +261,7 @@ p {
   }
 
   .harry-potter-button:hover {
-    color: #ffd700; /* Gold text on hover */
+    color: #ffd700;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
   }
@@ -329,21 +325,18 @@ p {
     width: 100vw;
     z-index: 1;
     position: fixed;
-    /* overflow: auto; */
   }
 
   .modal-content {
     background-color: rgb(231, 196, 149);
     opacity: 1;
     margin: 0 auto;
-    /* padding: 3vh; */
     border: 1px solid #888;
     border-radius: 20px;
     width: 50vw;
-    height: 22vh;
+    height: 18vh;
   }
 
-  /* The Close Button */
   .close {
     color: #aaa;
     float: right;

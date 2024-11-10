@@ -1,0 +1,4 @@
+Component to retrieve the images and names data from the api
+create a image card
+in div based on the choosen size easy med high give the set a winning score for each
+lets say for each 3 4 5 cards randomly we should display on any single click on any card right

@@ -1,0 +1,376 @@
+@font-face {
+  font-family: "HarryPotterFont";
+  src: url(../assets/fonts/HarryP.woff) format(woff),
+    url(../assets/fonts/HarryP.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: "HarryPotterFont";
+  color: #ffd700;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 2px #ffd700, 0 0 3px #ffd700, 0 0 4px #ff8c00;
+  }
+  100% {
+    text-shadow: 0 0 3px #ffd700, 0 0 5px #ffd700, 0 0 6px #ff8c00;
+  }
+}
+
+body.home-page {
+  background-image: url(../assets/images/harry_home.jpeg);
+  background-size: cover;
+  width: 100vw;
+  background-repeat: no-repeat;
+  /* background-color: 2px solid red; */
+}
+
+body.main-page {
+  background-image: url(../assets/images/harry_main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-color: 2px solid red;
+}
+
+.home-page {
+  font-size: 7vw;
+}
+
+.main-page {
+  font-size: 7vw;
+}
+
+.harry-potter-button {
+  background: linear-gradient(45deg, #ffd700, #ffaa00, #b8860b);
+  color: #ffffff;
+  font-family: "HarryPotterFont", serif; /* Use a Harry Potter-inspired font if available */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.harry-potter-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.harry-potter-button:hover::before {
+  left: 100%;
+}
+
+.harry-potter-button:hover {
+  color: #ffd700;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.game-info-text {
+  font-size: 5vw;
+}
+
+.score {
+  font-size: 3vw;
+  color: silver;
+  display: flex;
+  justify-content: space-around;
+  gap: 8vw;
+}
+
+.image-display {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: space-evenly;
+}
+
+.card-front {
+  position: relative;
+  width: 14vw;
+  height: 42vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-front:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.select-level {
+  margin: 2vh auto;
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+p {
+  font-size: 10vh;
+  margin-bottom: 0vh;
+}
+
+.modal {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: fixed;
+  /* overflow: auto; */
+}
+
+.modal-content {
+  background-color: rgb(253, 205, 142);
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 30vw;
+  height: 35vh;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.heading-audio {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+.audio {
+  width: 10vh;
+}
+
+.won-description {
+  font-size: 3vw;
+  margin: 0;
+  color: green;
+}
+
+.won-lost {
+  font-size: 4vw;
+}
+
+@media (max-width: 768px) {
+  body.home-page {
+    background-image: url(../assets/images/harry_home_mobile.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* font-size: 2rem; */
+  }
+
+  body.main-page {
+    background-image: url(../assets/images/harry_main_mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .home-page {
+    font-size: 8vh;
+  }
+
+  .main-page {
+    font-size: 8vh;
+  }
+
+  .harry-potter-button {
+    background: linear-gradient(45deg, #ffd700, #ffaa00, #b8860b);
+    color: #ffffff;
+    font-family: "HarryPotterFont", serif; /* Use a Harry Potter-inspired font if available */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .harry-potter-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+
+  .harry-potter-button:hover::before {
+    left: 100%;
+  }
+
+  .harry-potter-button:hover {
+    color: #ffd700; /* Gold text on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+  }
+
+  .game-info-text {
+    font-size: 4.5vh;
+  }
+
+  .score {
+    font-size: 4vh;
+    color: silver;
+    display: flex;
+    justify-content: space-between;
+    gap: 8vw;
+  }
+
+  .image-display {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: space-evenly;
+  }
+
+  .card-front {
+    position: relative;
+    width: 30vw;
+    height: 20vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .card-front:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-size: 5vh;
+    margin-bottom: 0vh;
+  }
+
+  .modal {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    position: fixed;
+    /* overflow: auto; */
+  }
+
+  .modal-content {
+    background-color: rgb(231, 196, 149);
+    opacity: 1;
+    margin: 0 auto;
+    /* padding: 3vh; */
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 50vw;
+    height: 22vh;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .heading-audio {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  .won-description {
+    font-size: 5vw;
+    margin: 0;
+    color: green;
+  }
+
+  .won-lost {
+    font-size: 10vw;
+  }
+}
